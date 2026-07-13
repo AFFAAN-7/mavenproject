@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-java@v5.5.0
         with:
           java-version: '21'
-           distribution: 'temurin'
+          distribution: 'temurin'
            
       - name: generating the package
         run: mvn package
