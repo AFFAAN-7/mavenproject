@@ -1,0 +1,17 @@
+name: maven project in self hosted
+on:
+  push:
+    branches: ["master"]
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: cloning maven
+        uses: action/checkout@v7.0.0
+      - name: checking version
+        run: java --version
+      - name: checking maven version
+        run: mvn --version
+      - name: generating package
+        run: mvn package
