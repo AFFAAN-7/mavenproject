@@ -10,8 +10,11 @@ jobs:
       - name: cloning maven
         uses: action/checkout@v7.0.0
       - name: checking version
+        shell: cmd
         run: java --version
       - name: checking maven version
+        shell: cmd
         run: mvn --version
       - name: generating package
+        shell: cmd
         run: mvn package
